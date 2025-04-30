@@ -26,4 +26,4 @@ function calculatePrice(config, ride) {
     return ((basePrice + dap) * tmf) + waitingCharges;
 }
 
-module.exports = { calculatePrice };
+export { calculatePrice };

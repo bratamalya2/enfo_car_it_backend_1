@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const pricingSchema = new mongoose.Schema({
     name: String,
@@ -22,4 +22,4 @@ const pricingSchema = new mongoose.Schema({
     freeWaitingMins: Number
 }, { timestamps: true });
 
-module.exports = mongoose.model('PricingConfig', pricingSchema);
+export default mongoose.model('PricingConfig', pricingSchema);

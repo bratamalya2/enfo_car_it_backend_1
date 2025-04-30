@@ -1,9 +1,14 @@
-const express = require('express');
+import express from 'express';
+
+import pricingController from '../services/pricingController.js';
+
 const router = express.Router();
-const { calculateRidePrice, createConfig, listConfigs } = require('../services/pricingController');
 
-router.post('/calculate', calculateRidePrice);
-router.post('/config', createConfig);
-router.get('/configs', listConfigs);
+router.post('/calculate', pricingController.calculateRidePrice);
+router.post('/config', pricingController.createConfig);
+router.get('/configs', pricingController.listConfigs);
+router.post('/bookARide', pricingController.bookARide);
+router.post('/startARide', pricingController.startARide);
+router.post('/finishARide', pricingController.finishARide);
 
-module.exports = router;
+export default router;
